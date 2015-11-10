@@ -40,7 +40,6 @@ public class Sueldo {
 		else {
 			resultado = totalHoras * PRECIO_HORA_NORMAL;
 		}	
-		
 		return resultado;
 	}
 

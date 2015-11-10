@@ -31,7 +31,7 @@ public class SueldoSinMetodo {
 			continuar = new Scanner(System.in).next();
 		} 
 		while (continuar.equalsIgnoreCase("S"));  
-		System.out.println("Termino...");
+		System.out.println("Fin programa...");
 	}
 
 } // class

@@ -14,7 +14,6 @@ public class Multiplo1 	{
 
 		//llamada al método
 		muestraMultiplos1();
-
 	}
 
 	//Declaración del método

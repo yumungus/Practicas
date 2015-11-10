@@ -13,13 +13,14 @@ public class CuadradoMejor 	{
 		int longitudLinea = TAMAÑO_CUADRADO;
 		String textoBase = "* ";
 		String lineaBuffer = "";
+		String salida = "";
 
 		//Primera línea.	
 		for (int i = 1; i <= longitudLinea; i++) {
 			lineaBuffer += textoBase;
 		}
-		System.out.println(lineaBuffer);
-
+		salida += lineaBuffer + "\n";
+		
 		// Bloque central de líneas. 
 		for (int j = 2; j < TAMAÑO_CUADRADO; j++) {
 			
@@ -29,7 +30,7 @@ public class CuadradoMejor 	{
 				lineaBuffer += "  ";
 			}
 			lineaBuffer += textoBase;
-			System.out.println(lineaBuffer);
+			salida += lineaBuffer + "\n";
 		}
 
 		//Última línea.	
@@ -37,7 +38,9 @@ public class CuadradoMejor 	{
 		for (int i = 1; i <= longitudLinea; i++) {
 			lineaBuffer += textoBase;
 		}
-		System.out.println(lineaBuffer);	
+		salida += lineaBuffer + "\n";
+	
+		System.out.println(salida);	
 	}
 	
 } //class
