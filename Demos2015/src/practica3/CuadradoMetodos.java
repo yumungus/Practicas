@@ -38,7 +38,7 @@ public class CuadradoMetodos 	{
 	/**
 	 * Genera un bloque de tamaño variable de caracteres iguales. 
 	 * @param longitud, el tamaño del bloque.
-	 * @param c, el caracter base.
+	 * @param c, el carácter base.
 	 * @return resultado, el bloque obtenido.
 	 */
 	static String generarBloqueCaracteres(int longitud, String textoBase) {

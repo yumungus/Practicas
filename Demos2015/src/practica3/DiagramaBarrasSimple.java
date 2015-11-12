@@ -3,7 +3,7 @@ package practica3;
 import java.util.Scanner;
 
 /**
- * DiagramaBarras.java
+ * DiagramaBarrasSimple.java
  * Programa que muestra en pantalla un diagrama de barras horizontales.
  * Genera líneas de texto de un CARACTER_BASE que representan los valores numéricos
  * comprendido entre LIMITE_INFERIOR y LIMITE_SUPERIOR. 
@@ -14,16 +14,18 @@ import java.util.Scanner;
 
 public class DiagramaBarrasSimple 	{
 
-	static final int LIMITE_SUPERIOR = 10;
-	static final int LIMITE_INFERIOR = -10;
-	static final char CARACTER_BASE = '*';
-
 	public static void main(String[] args) {
-
+		final int LIMITE_SUPERIOR = 10;
+		final int LIMITE_INFERIOR = -10;
+		final char CARACTER_BASE = '*';
 		boolean fueraRango = false;
-		System.out.print("Escribe números entre " + LIMITE_INFERIOR + " y " + LIMITE_SUPERIOR + "...");
+		String salidaConsola = "";
+		
+		System.out.println("Escribe números entre " + LIMITE_INFERIOR + " y " + LIMITE_SUPERIOR + "...");
+		System.out.println("(Termina con el primer valor fuera de límites)");
 		do {
 			int dato = new Scanner(System.in).nextInt();
+			
 			String barra = "";								// La cadena de caracteres a generar.
 			String parteNegativaBarra = "";								
 			String partePositivaBarra = "";	
@@ -60,9 +62,10 @@ public class DiagramaBarrasSimple 	{
 				barra = dato + " FUERA DE RANGO\n"; 		// Prepara mensaje de error.
 				fueraRango = true;
 			}
-			System.out.print(barra);
+			salidaConsola += barra;
 		} 
 		while (fueraRango == false);
+		System.out.println(salidaConsola);
 		System.out.println("Fin programa...");
 	}
 
