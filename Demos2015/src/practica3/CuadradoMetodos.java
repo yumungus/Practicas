@@ -6,35 +6,44 @@ package practica3;
  */	
 public class CuadradoMetodos 	{
 
+
 	public static void main(String[] arg) {
 
-		final int TAMAÑO_CUADRADO = 7;
-		
-		int longitudLinea = TAMAÑO_CUADRADO;
+		int tamañoCuadrado = 7;	
+		System.out.println(generarCuadrado(tamañoCuadrado));	
+	}
+
+	/**
+	 * Genera un cuadrado hueco de tamaño variable.
+	 * @param tamañoCuadrado.
+	 * @return resultado, el texto con el cuadrado formado.
+	 */
+	private static String generarCuadrado(int tamañoCuadrado) {
+		int longitudLinea = tamañoCuadrado;
 		String textoBase = "* ";
 		String lineaBuffer = "";
-		String salidaConsola = "";
+		String resultado = "";
 
 		//Primera línea.	
 		lineaBuffer = generarBloqueCaracteres(longitudLinea, textoBase);
-		salidaConsola += lineaBuffer + "\n";
+		resultado += lineaBuffer + "\n";
 
 		// Bloque central de líneas. 
-		for (int j = 2; j < TAMAÑO_CUADRADO; j++) {	
+		for (int i = 2; i < tamañoCuadrado; i++) {	
 			//Línea con huecos.
 			lineaBuffer = textoBase;
 			lineaBuffer += generarBloqueCaracteres(longitudLinea - 2, "  ");
 			lineaBuffer += textoBase;
-			salidaConsola += lineaBuffer + "\n";
+			resultado += lineaBuffer + "\n";
 		}
 
 		//Última línea.	
 		lineaBuffer = generarBloqueCaracteres(longitudLinea, textoBase);
-		salidaConsola += lineaBuffer + "\n";
-		
-		System.out.println(salidaConsola);	
+		resultado += lineaBuffer + "\n";
+
+		return resultado;
 	}
-	
+
 	/**
 	 * Genera un bloque de tamaño variable de caracteres iguales. 
 	 * @param longitud, el tamaño del bloque.
@@ -48,7 +57,7 @@ public class CuadradoMetodos 	{
 		}
 		return resultado;
 	}
-	
+
 } //class
 
 
