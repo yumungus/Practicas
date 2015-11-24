@@ -19,18 +19,7 @@ public class SueldoVariosMetodos {
 		do {
 			
 			int horas = obtenerDatos();
-			
-			
-			// Cálculo de sueldo ***********************
-			int sueldo;
-			if (horas > LIMITE_HORAS_NORMALES) {
-				sueldo = LIMITE_HORAS_NORMALES * PRECIO_HORA_NORMAL;
-				sueldo += (horas - LIMITE_HORAS_NORMALES) * PRECIO_HORA_EXTRA;
-			}
-			else {
-				sueldo = horas * PRECIO_HORA_NORMAL;
-			}
-			//fin cálculo de sueldo ********************
+			int sueldo = calcularSueldo(horas);
 			
 			
 			// Mostrar resultados **********************
@@ -51,6 +40,23 @@ public class SueldoVariosMetodos {
 		//fin mostrar mensaje final ********************
 	}
 
+	/**
+	 * Calcula sueldo según los límites y precios establecidos.
+	 * @param totalHoras
+	 * @return sueldoResultante
+	 */
+	static int calcularSueldo(int totalHoras) {
+		int sueldoResultante;
+		if (totalHoras > LIMITE_HORAS_NORMALES) {
+			sueldoResultante = LIMITE_HORAS_NORMALES * PRECIO_HORA_NORMAL;
+			sueldoResultante += (totalHoras - LIMITE_HORAS_NORMALES) * PRECIO_HORA_EXTRA;
+		}
+		else {
+			sueldoResultante = totalHoras * PRECIO_HORA_NORMAL;
+		}
+		return sueldoResultante;
+	}
+	
 	/**
 	 * Obtiene datos para el calcular el sueldo.
 	 * @return totalHoras
