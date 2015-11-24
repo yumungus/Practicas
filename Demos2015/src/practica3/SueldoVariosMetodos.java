@@ -20,11 +20,7 @@ public class SueldoVariosMetodos {
 			
 			int horas = obtenerDatos();
 			int sueldo = calcularSueldo(horas);
-			
-			
-			// Mostrar resultados **********************
-			System.out.println(sueldo);
-			//fin mostrar resultados *******************
+			mostrarResultado(sueldo);
 			
 			
 			// Dialogar continuar ***********************
@@ -38,6 +34,14 @@ public class SueldoVariosMetodos {
 		// Mostrar mensaje final ***********************
 		System.out.println("Termino...");
 		//fin mostrar mensaje final ********************
+	}
+
+	/**
+	 * Muestra resultado en la consola.
+	 * @param totalSueldo
+	 */
+	static void mostrarResultado(int totalSueldo) {
+		System.out.println(totalSueldo);
 	}
 
 	/**
