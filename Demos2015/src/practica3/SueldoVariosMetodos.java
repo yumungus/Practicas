@@ -15,25 +15,32 @@ public class SueldoVariosMetodos {
 	static final int LIMITE_HORAS_NORMALES = 35;
 	
 	public static void main(String[] args) {		
-		String continuar;
+		boolean continuar;
 		do {
 			
 			int horas = obtenerDatos();
 			int sueldo = calcularSueldo(horas);
 			mostrarResultado(sueldo);
-			
-			
-			// Dialogar continuar ***********************
-			System.out.println("¿Quieres continuar?");
-			continuar = new Scanner(System.in).next();
-			//fin dialogar continuar ********************
+			continuar = dialogarContinuar();
 		} 
-		while (continuar.equalsIgnoreCase("S"));  
+		while (continuar);  
 		
 		
 		// Mostrar mensaje final ***********************
 		System.out.println("Termino...");
 		//fin mostrar mensaje final ********************
+	}
+
+	/**
+	 * Dialogo para continuar
+	 * @return true, para continuar
+	 */
+	static boolean dialogarContinuar() {
+		System.out.println("¿Quieres continuar?");
+		String tecla = new Scanner(System.in).next();
+		if (tecla.equalsIgnoreCase("S"))
+			return true;
+		return false;
 	}
 
 	/**
