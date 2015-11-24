@@ -5,7 +5,7 @@ import java.util.Iterator;
 /**
  * BannerVector.java
  * Programa ejemplo que genera banner de una letra utilizando un vector.
- * ajp - 2015.11.19
+ * ajp - 2015.11.24
  */
 
 public class BannerVector {
@@ -13,9 +13,7 @@ public class BannerVector {
 	public static void main(String[] args) {	
 
 		char letra = 'a';
-		System.out.println(bannerLetra(letra)); 	
-
-		//System.out.println(bannerLetra(Character.toUpperCase(letra))); 	
+		System.out.println(bannerLetra(Character.toUpperCase(letra))); 	
 	}
 
 	/** * Proporciona representación banner de una letra.
