@@ -18,15 +18,11 @@ public class SueldoVariosMetodos {
 		String continuar;
 		do {
 			
-			// Obtener datos ***************************
-			System.out.println("Calcula sueldo...");
-			System.out.print("Teclea total de horas: ");
-			int horas = new Scanner(System.in).nextInt();
-			int sueldo;
-			//fin obtener datos ************************
+			int horas = obtenerDatos();
 			
 			
 			// Cálculo de sueldo ***********************
+			int sueldo;
 			if (horas > LIMITE_HORAS_NORMALES) {
 				sueldo = LIMITE_HORAS_NORMALES * PRECIO_HORA_NORMAL;
 				sueldo += (horas - LIMITE_HORAS_NORMALES) * PRECIO_HORA_EXTRA;
@@ -55,4 +51,15 @@ public class SueldoVariosMetodos {
 		//fin mostrar mensaje final ********************
 	}
 
+	/**
+	 * Obtiene datos para el calcular el sueldo.
+	 * @return totalHoras
+	 */
+	static int obtenerDatos() {
+		
+		System.out.println("Calcula sueldo...");
+		System.out.print("Teclea total de horas: ");
+		int totalHoras = new Scanner(System.in).nextInt();
+		return totalHoras;
+	}
 } // class
