@@ -15,20 +15,21 @@ public class SueldoVariosMetodos {
 	static final int LIMITE_HORAS_NORMALES = 35;
 	
 	public static void main(String[] args) {		
-		boolean continuar;
-		do {
-			
+		do {		
 			int horas = obtenerDatos();
 			int sueldo = calcularSueldo(horas);
 			mostrarResultado(sueldo);
-			continuar = dialogarContinuar();
 		} 
-		while (continuar);  
-		
-		
-		// Mostrar mensaje final ***********************
-		System.out.println("Termino...");
-		//fin mostrar mensaje final ********************
+		while (dialogarContinuar());  
+		mostrarMensaje("Termino...");
+	}
+
+	/**
+	 * Muestra un mensaje por consola.
+	 * @param mensaje
+	 */
+	static void mostrarMensaje(String mensaje) {
+		System.out.println(mensaje);
 	}
 
 	/**
