@@ -1,6 +1,5 @@
 package practica3;
 
-
 import java.util.Scanner;
 
 /**
@@ -18,12 +17,16 @@ public class SueldoVariosMetodos {
 	public static void main(String[] args) {		
 		String continuar;
 		do {
+			
+			// Obtener datos ***************************
 			System.out.println("Calcula sueldo...");
 			System.out.print("Teclea total de horas: ");
 			int horas = new Scanner(System.in).nextInt();
 			int sueldo;
+			//fin obtener datos ************************
 			
-			// Cálculo	
+			
+			// Cálculo de sueldo ***********************
 			if (horas > LIMITE_HORAS_NORMALES) {
 				sueldo = LIMITE_HORAS_NORMALES * PRECIO_HORA_NORMAL;
 				sueldo += (horas - LIMITE_HORAS_NORMALES) * PRECIO_HORA_EXTRA;
@@ -31,13 +34,25 @@ public class SueldoVariosMetodos {
 			else {
 				sueldo = horas * PRECIO_HORA_NORMAL;
 			}
-			System.out.println(sueldo);
+			//fin cálculo de sueldo ********************
 			
+			
+			// Mostrar resultados **********************
+			System.out.println(sueldo);
+			//fin mostrar resultados *******************
+			
+			
+			// Dialogar continuar ***********************
 			System.out.println("¿Quieres continuar?");
 			continuar = new Scanner(System.in).next();
+			//fin dialogar continuar ********************
 		} 
 		while (continuar.equalsIgnoreCase("S"));  
+		
+		
+		// Mostrar mensaje final ***********************
 		System.out.println("Termino...");
+		//fin mostrar mensaje final ********************
 	}
 
 } // class
