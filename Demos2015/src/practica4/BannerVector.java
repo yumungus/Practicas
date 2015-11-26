@@ -12,7 +12,7 @@ public class BannerVector {
 	
 	public static void main(String[] args) {	
 
-		char letra = 'a';
+		char letra = 'f';
 		System.out.println(bannerLetra(Character.toUpperCase(letra))); 	
 	}
 
@@ -65,6 +65,14 @@ public class BannerVector {
 			+ 	"E      \n" 
 			+ 	"E      \n" 
 			+ 	"EEEEEEE\n",
+			
+				"FFFFFFF\n" 
+			+	"F      \n" 
+			+ 	"F      \n" 
+			+ 	"FFFFF  \n" 
+			+ 	"F      \n" 
+			+ 	"F      \n" 
+			+ 	"F      \n",
 		} ;
 		
 		return representaciones[letra - 'A'];
